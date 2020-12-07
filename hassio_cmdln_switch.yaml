@@ -1,0 +1,18 @@
+
+switch:
+  - platform: command_line
+    switches:
+      home_assistant_system_kaku_socket2:
+        command_off: "/usr/bin/wget -q \"http://192.168.4.26/KakuCtl.php?KakuAdr=12521262&KakuCmd=2&KakuVal=0\" -O /tmp/Kakulog"
+        command_on: "/usr/bin/wget -q \"http://192.168.4.26/KakuCtl.php?KakuAdr=12521262&KakuCmd=2&KakuVal=1\" -O /tmp/Kakulog"
+        friendly_name: RedSocket
+      home_assistant_system_socket0:
+        command_off: "/usr/bin/wget -q \"http://192.168.4.26/KakuCtl.php?KakuAdr=12521262&KakuCmd=0&KakuVal=0\" -O /tmp/Kakulog"
+        command_on: "/usr/bin/wget -q \"http://192.168.4.26/KakuCtl.php?KakuAdr=12521262&KakuCmd=0&KakuVal=1\" -O /tmp/Kakulog"
+        friendly_name: BlueSocket
+      home_assistant_system_socket1:
+        command_off: "/usr/bin/wget -q \"http://192.168.4.26/KakuCtl.php?KakuAdr=12521262&KakuCmd=1&KakuVal=0\" -O /tmp/Kakulog"
+        command_on: "/usr/bin/wget -q \"http://192.168.4.26/KakuCtl.php?KakuAdr=12521262&KakuCmd=1&KakuVal=1\" -O /tmp/Kakulog"
+        friendly_name: GreenSocket
+        
+        
